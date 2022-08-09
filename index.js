@@ -15,13 +15,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/notes.html'));
+});
+
 // this "requires" the notes data to be handled by the route below
 
 //const notes = require('./db/db.json')
 
 //const router = express('express').Router;
 
-// This will accept form input from the index.html file
+//This will accept form input from the index.html file
 // app.post('/api/notes', (req, res) => {
 //   // req.body is where our incoming content will be
 //   console.log(req.body);
@@ -41,18 +45,15 @@ app.use(express.static('public'));
 //   res.sendFile(path.join(__dirname, './db/db.json'));
 //   res.send('Hello!');
 // });
-// module.exports = app;
-
-// route for note request
-
-// this allows us to chain on methods to the Express.js server
-app.listen(3100, () => {
-  console.log(`API server now on port 3100!`);
-});
 
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-app.get('/db/db', (req, res) => {
+app.get('/db/db', (_req, res) => {
+  res.sendFile(path.join(__dirname, './db/db.json'));
   res.send('Hello!');
+});
+
+app.listen(3100, () => {
+  console.log(`API server now on port 3100!`);
 });
