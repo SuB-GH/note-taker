@@ -11,7 +11,7 @@ This note taker app allows the user to create and save notes.  It is a very usef
 
 ## Screenshot:
 
-![screenshot of notes page](/note-taker/public/assets/images/Capture2.PNG)
+![screenshot of notes page](public/assets/images/Capture2.PNG)
 
 
 ## Deployed Application
