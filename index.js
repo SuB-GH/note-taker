@@ -1,59 +1,20 @@
-const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
-
-const fs = require('fs');
-const path = require('path');
-const { notes } = require('./db/db.json')
-
 const express = require('express');  //this "requires" express.js
 const PORT = process.env.PORT || 3100;
 const app = express()  //this instantiates the server
 
-// parse incoming data
+const apiRoutes = require('./routes/apiRoutes');
+const htmlRoutes = require('./routes/htmlRoutes');
+
+// parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './public/notes.html'));
-});
-
-// this "requires" the notes data to be handled by the route below
-
-//const notes = require('./db/db.json')
-
-//const router = express('express').Router;
-
-//This will accept form input from the index.html file
-// app.post('/api/notes', (req, res) => {
-//   // req.body is where our incoming content will be
-//   console.log(req.body);
-//   res.json(req.body);
-// });
-
-// HTML Routes to request data from front-end
-// GET /notes should return the notes.html file.
-// GET * should return the index.html file.
-
-// API Route to request data from front-end
-// GET /api/notes should read the db.json file and return all saved notes as JSON.
-// POST /api/notes should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client. You'll need to find a way to give each note a unique id when it's saved 
-// (look into npm packages that could do this for you).
-
-// app.get('/db', (req, res) => {
-//   res.sendFile(path.join(__dirname, './db/db.json'));
-//   res.send('Hello!');
-// });
-
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
-
-app.get('/db/db', (_req, res) => {
-  res.sendFile(path.join(__dirname, './db/db.json'));
-  res.send('Hello!');
-});
 
 app.listen(3100, () => {
   console.log(`API server now on port 3100!`);
 });
+
