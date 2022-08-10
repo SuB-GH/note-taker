@@ -13,6 +13,7 @@ This note taker app allows the user to create and save notes.  It is a very usef
 
 ![alt text](assets/images/Capture2.png)
 
+
 ## Deployed Application
 This application has been deployed to Heroku: 
 https://hidden-taiga-77504.herokuapp.com/ 
