@@ -39,6 +39,21 @@
       "title": "add this note ",
       "text": "new note",
       "id": "7"
+    },
+    {
+      "title": "new note",
+      "text": "do this now",
+      "id": "8"
+    },
+    {
+      "title": "new task",
+      "text": "do today",
+      "id": "9"
+    },
+    {
+      "title": "eat dinner",
+      "text": "eat",
+      "id": "10"
     }
   ]
 }
