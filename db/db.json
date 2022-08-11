@@ -1,29 +1,29 @@
 {
   "notes": [
     {
-      "id": "0",
       "title": "Do Laundry",
-      "text": "Wash and dry laundry"
+      "text": "Wash and dry laundry",
+      "id": "0"
     },
     {
-      "id": "1",
       "title": "Go to bank",
-      "text": "deposit checks"
+      "text": "deposit checks",
+      "id": "1"
     },
     {
-      "id": "2",
       "title": "replace lightbulbs",
-      "text": "replace lightbulbs in kitchen"
+      "text": "replace lightbulbs in kitchen",
+      "id": "2"
     },
     {
-      "id": "3",
       "title": "Grocery shopping",
-      "text": "milk, bread, tomatoes"
+      "text": "milk, bread, tomatoes",
+      "id": "3"
     },
     {
-      "id": "4",
       "title": "Pay bills",
-      "text": "credit card and electric bills"
+      "text": "credit card and electric bills",
+      "id": "4"
     },
     {
       "title": "new note",
@@ -34,6 +34,11 @@
       "title": "this is task 6",
       "text": "task 6",
       "id": "6"
+    },
+    {
+      "title": "add this note ",
+      "text": "new note",
+      "id": "7"
     }
   ]
 }
