@@ -24,7 +24,16 @@
       "id": "4",
       "title": "Pay bills",
       "text": "credit card and electric bills"
+    },
+    {
+      "title": "new note",
+      "text": "do this now!",
+      "id": "5"
+    },
+    {
+      "title": "this is task 6",
+      "text": "task 6",
+      "id": "6"
     }
-    
   ]
 }
